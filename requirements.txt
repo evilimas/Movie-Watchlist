@@ -1,0 +1,12 @@
+Requirements------
+1.Two pages - index.html and watchlist.html
+2.Index = search page. Calls to OMDB API with the title searched for and displays search results.
+3.Button to "add to watchlist" which saves that data to local storage.
+4.Watchlist.html loads and displays data from local storage.
+
+
+API----
+https://www.omdbapi.com/
+
+API key ----
+1b9d87f6
