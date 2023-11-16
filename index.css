@@ -1,161 +1,150 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: auto;
 }
-body{
-    
-}
+
 /* ----HEADER---- */
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3em;
-    background: url('images/header.jpg');
-    background-size:cover;
-    background-position-y: 25%;
-    position: relative;
-    color: white;
-    
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3em;
+  background: url('images/header.jpg');
+  background-size: cover;
+  background-position-y: 25%;
+  position: relative;
+  color: white;
 }
-header::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0.81;
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.81;
 }
-header h1{
-    font-size: 3rem;
-    z-index: 9;
+header h1 {
+  font-size: 3rem;
+  z-index: 9;
 }
-header a{
-     z-index: 9;
-     color: white;
-     text-decoration: none;
+header a {
+  z-index: 9;
+  color: white;
+  text-decoration: none;
 }
 /* ----INPUTS----- */
 
-div.inputs{
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
-    
-    
-    
+div.inputs {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
 }
-.inputs input{
-    padding: 0.4em;
-    width: 60%;
-    z-index: 999;
-    border-radius: 7px 0px 0px 7px;
-    border: 1px solid grey;
-    
-   
+.inputs input {
+  padding: 0.4em;
+  width: 60%;
+  z-index: 999;
+  border-radius: 7px 0px 0px 7px;
+  border: 1px solid grey;
 }
-.inputs button{
-    padding: 0.6em 2em;
-     z-index: 999;
-     border-radius: 0px 7px 7px 0px;
-     border: 1px solid grey;
-     border-left: none;
+.inputs button {
+  padding: 0.6em 2em;
+  z-index: 999;
+  border-radius: 0px 7px 7px 0px;
+  border: 1px solid grey;
+  border-left: none;
 }
 
 /* --- Section ---- Movies ----- */
 
-.root{
-    display: flex;
-    flex-direction: column;
-    height: 70vh;
-   
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
 }
-.root-img{
-    margin: auto;
-}
-
-.movie{
-    display: flex;
-    padding: 2em;
-    gap: 1rem
-}
-.img-container img{
-    width: 120px
+.root-img {
+  margin: auto;
 }
 
-.top{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.movie {
+  display: flex;
+  padding: 2em;
+  gap: 1rem;
 }
-.top img{
-    margin-top: -4px
-}
-.top h2{
-    margin: 0;
-    font-size: 1.4rem
-}
-.middle{
-    display: flex;
-    align-items: center;
-    gap: 1rem
-}
-.middle p{
-    margin-top: 0;
-    font-size: 0.8rem
+.img-container img {
+  width: 120px;
 }
 
-.watchlist-con{
-    display: flex;
-    align-items: center;
-    
+.top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.watchlist-con button{
-    border: none;
-    background: none;
-    cursor: pointer;
-    margin-top: -13px;
-    
+.top img {
+  margin-top: -4px;
 }
-.watchlist-con p{
-    font-size: 0.9rem;
+.top h2 {
+  margin: 0;
+  font-size: 1.4rem;
 }
-.added{
-    color: green;
-    display: none;
-    font-weight: bold;  
-    
+.middle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.plot{
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #6B7280;
-    margin-right: 3em
+.middle p {
+  margin-top: 0;
+  font-size: 0.8rem;
 }
 
-.search-no{
-    margin: auto;
-    font-size: 1.3rem;
-    color: #DFDDDD;
-    
+.watchlist-con {
+  display: flex;
+  align-items: center;
+}
+.watchlist-con button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-top: -13px;
+}
+.watchlist-con p {
+  font-size: 0.9rem;
+}
+.added {
+  color: green;
+  display: none;
+  font-weight: bold;
+}
+.plot {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #6b7280;
+  margin-right: 3em;
+}
+
+.search-no {
+  margin: auto;
+  font-size: 1.3rem;
+  color: #dfdddd;
 }
 /* Watchlist CSS */
 
-.empty{
-    margin: auto;
-    text-align: center
+.empty {
+  margin: auto;
+  text-align: center;
 }
-.empty > p{
-    color: #DFDDDD;
-    font-weight: bold;
-    font-size: 1.4rem;
+.empty > p {
+  color: #dfdddd;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
-.empty a{
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: black;
+.empty a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
 }
