@@ -5,6 +5,9 @@ body {
   max-width: 1400px;
   margin: auto;
 }
+hr {
+  opacity: 0.2;
+}
 
 /* ----HEADER---- */
 header {

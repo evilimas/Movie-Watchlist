@@ -79,7 +79,9 @@ function renderMovies() {
                             <p class="plot">${data.Plot}</p>
                         </div>
                         </div>
+                        <div>
                         <hr/>
+                        </div>
                     `;
       });
 
