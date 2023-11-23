@@ -13,7 +13,7 @@ function renderWatchlist() {
   }
   root.innerHTML = '';
 
-  watchlist.forEach((data) => {
+  watchlist.forEach((data, index) => {
     root.innerHTML += `
                     <div class="movie">
                         <div class="img-container">
@@ -41,7 +41,7 @@ function renderWatchlist() {
                         </div>
                     </div>
                     <div>
-                        <hr/>
+                    ${index !== watchlist.length - 1 ? '<hr/>' : ''}
                     </div>`;
   });
 

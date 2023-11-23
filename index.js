@@ -48,7 +48,7 @@ function renderMovies() {
     .then((moviesData) => {
       // Now movies is an array of all movie details
       movies = moviesData;
-      movies.forEach((data) => {
+      movies.forEach((data, index) => {
         const isMovieInWatchlist = watchlist.some(
           (movie) => movie.imdbID === data.imdbID
         );
@@ -80,7 +80,7 @@ function renderMovies() {
                         </div>
                         </div>
                         <div>
-                        <hr/>
+                        ${index !== movies.length - 1 ? '<hr/>' : ''}
                         </div>
                     `;
       });
