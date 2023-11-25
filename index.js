@@ -80,7 +80,7 @@ function renderMovies() {
                         </div>
                         </div>
                         <div>
-                        ${index !== movies.length - 1 ? '<hr/>' : ''}
+                          ${index !== movies.length - 1 ? '<hr/>' : ''}
                         </div>
                     `;
       });
