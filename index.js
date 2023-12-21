@@ -57,12 +57,12 @@ function renderMovies() {
                         <div class="img-container">
                             <img src="${
                               data.Poster === 'N/A' ? noPoster : data.Poster
-                            }"/>
+                            }" alt="movie poster image"/>
                         </div>
                         <div class="des-container">
                             <div class="top">
                                 <h2>${data.Title}</h2>
-                                <img src="images/star.png"/>
+                                <img src="images/star.png" alt="star icon"/>
                                 <p>${data.imdbRating}</p>
                             </div>
                             <div class="middle">
