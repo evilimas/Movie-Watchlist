@@ -72,7 +72,7 @@ function renderMovies() {
                                     <p class="added">Added</p>
                                     <button class="watchlist-btn" data-imdbid="${
                                       data.imdbID
-                                    }"><img src="images/plus.png"/></button>
+                                    }"><img src="images/plus.png"/ alt="plus icon to add movie to watchlist"></button>
                                     <p class="watchlist-text">Watchlist</p>
                                 </div>
                             </div>
