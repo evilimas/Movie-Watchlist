@@ -33,7 +33,7 @@ function renderWatchlist() {
                                 <div class="watchlist-con">
                                     <button id="watchlist-btn" class="watchlist-btn remove-btn" data-imdbid="${
                                       data.imdbID
-                                    }"><img src="images/minus.png"/></button>
+                                    }"><img src="images/minus.png" alt="minus icon to remove from watchlist"/></button>
                                     <p>Watchlist</p>
                                 </div>
                             </div>
