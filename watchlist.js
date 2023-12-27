@@ -1,11 +1,11 @@
 const noPoster = `./images/no-poster.jpg`;
 const root = document.getElementById('movies-container');
 
-// Load watchlist from local storage if it exists
+// load watchlist from local storage if it exists
 let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 
 function renderWatchlist() {
-  // Checks if washlist array is empty or not and renders div with class empty
+  // checks if washlist array is empty or not and renders div with class empty
   if (watchlist.length === 0) {
     document.getElementById('empty').style.display = 'block';
   } else {
@@ -56,17 +56,17 @@ renderWatchlist();
 function removeFromWatchlist(e) {
   const imdbID = e.currentTarget.getAttribute('data-imdbid');
 
-  // Find the index of the movie in the watchlist array
+  // find the index of the movie in the watchlist array
   const index = watchlist.findIndex((movie) => movie.imdbID === imdbID);
 
   if (index !== -1) {
-    // Remove the item from the watchlist array
+    // remove the item from the watchlist array
     watchlist.splice(index, 1);
 
-    // Save the updated watchlist to local storage
+    // save the updated watchlist to local storage
     localStorage.setItem('watchlist', JSON.stringify(watchlist));
 
-    // Re-render the watchlist
+    // re render the watchlist
     renderWatchlist();
   }
 }
