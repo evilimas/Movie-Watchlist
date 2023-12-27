@@ -7,7 +7,6 @@ let movies = [];
 let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 
 btn.addEventListener('click', function (e) {
-  // inputEl.value = ""
   e.preventDefault();
   renderMovies();
 });
@@ -16,7 +15,8 @@ function renderMovies() {
   rootImg.style.display = 'none';
   root.innerHTML = '';
 
-  const searchValue = inputEl.value.trim(); // Trim to remove leading/trailing spaces
+  const searchValue = inputEl.value.trim();
+  // Trim to remove leading/trailing spaces
 
   if (!searchValue) {
     root.innerHTML =
@@ -42,7 +42,6 @@ function renderMovies() {
         ).then((response) => response.json());
       });
 
-      // wait for all promises to resolve
       return Promise.all(movieDetailPromises);
     })
     .then((moviesData) => {
@@ -109,7 +108,6 @@ function addToWatchlist(e) {
       // add movie to the watchlist
       watchlist.push(movieToAdd);
 
-      // to  save watchlist to local storage
       localStorage.setItem('watchlist', JSON.stringify(watchlist));
 
       // add "Added" class to the corresponding h6 element
