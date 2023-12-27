@@ -35,18 +35,18 @@ function renderMovies() {
         return;
       }
 
-      // Extract the array of promises for movie details
+      // extract the array of promises for movie details
       const movieDetailPromises = data.Search.map((movie) => {
         return fetch(
           `https://www.omdbapi.com/?apikey=1b9d87f6&type=movie&i=${movie.imdbID}`
         ).then((response) => response.json());
       });
 
-      // Wait for all promises to resolve
+      // wait for all promises to resolve
       return Promise.all(movieDetailPromises);
     })
     .then((moviesData) => {
-      // Now movies is an array of all movie details
+      // now movies is an array of all movie details
       movies = moviesData;
       movies.forEach((data, index) => {
         const isMovieInWatchlist = watchlist.some(
@@ -98,21 +98,21 @@ function renderMovies() {
 function addToWatchlist(e) {
   const imdbID = e.currentTarget.getAttribute('data-imdbid');
 
-  // Check if the movie is already in the watchlist
+  // check if the movie is already in the watchlist
   const isMovieInWatchlist = watchlist.some((movie) => movie.imdbID === imdbID);
 
   if (!isMovieInWatchlist) {
-    // Find the selected movie from the array of all movies
+    // find the selected movie from the array of all movies
     const movieToAdd = movies.find((movie) => movie.imdbID === imdbID);
 
     if (movieToAdd) {
-      // Add the movie to the watchlist
+      // add movie to the watchlist
       watchlist.push(movieToAdd);
 
-      // Save watchlist to local storage
+      // to  save watchlist to local storage
       localStorage.setItem('watchlist', JSON.stringify(watchlist));
 
-      // Add "Added" class to the corresponding h6 element
+      // add "Added" class to the corresponding h6 element
       const addedElement =
         e.currentTarget.parentElement.querySelector('.added');
       if (addedElement) {
@@ -120,7 +120,7 @@ function addToWatchlist(e) {
         addedElement.innerText = 'Added'; // Update text to "Added"
       }
 
-      // Hide the clicked "watchlist-btn" and "watchlist-text" elements
+      // hide the clicked "watchlist-btn" and "watchlist-text" elements
       e.currentTarget.style.display = 'none';
       const watchlistText =
         e.currentTarget.parentElement.querySelector('.watchlist-text');
